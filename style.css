@@ -1,0 +1,59 @@
+/***********main***********/
+*{
+    margin:0;
+    padding:0;
+    font-family:'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-image: url('');
+    background-repeat:no-repeat;
+    background-size: cover;
+    color: #ebecf0;
+    background-attachment: fixed;
+}
+html{
+    scroll-behavior: smooth;
+}
+#main{
+    width: 100%;
+    height: 100vh;
+}
+/************pyramid**********/
+.choices{
+    text-align: center;
+}
+.pyramid-level {
+    position: relative;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    margin-right:auto;
+    margin-left:auto;
+  }
+  
+  
+  #pyramid-level-1 {
+      border-top: 100px ;
+      width: 200px;
+  }
+  
+  #pyramid-level-2 {
+      border-top: 100px ;
+      width: 100px;
+  }
+  
+  #pyramid-level-3 {
+      border-top: 100px ;  
+      width: 0;
+  }
+/* Add a class for all buttons */
+.button {
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease;
+  }
+  
+/* Highlight style for clicked buttons */
+.highlighted {
+    background-color: #ffcc00; /* Change this to the desired highlight color */
+  }
