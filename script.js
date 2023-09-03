@@ -40,3 +40,21 @@ buttons.forEach(button => {
   });
 });
 
+const favoriteButton = document.getElementById("favoriteButton");
+let isFavorite = false;
+
+favoriteButton.addEventListener("click", function(event) {
+  event.preventDefault(); // Prevent the anchor tag from navigating
+
+  // Toggle the favorite state
+  isFavorite = !isFavorite;
+
+  // Update the button text based on the state
+  if (isFavorite) {
+    favoriteButton.textContent = "Remove Favorite";
+  } else {
+    favoriteButton.textContent = "Favorite";
+  }
+
+  // You can add more logic here, such as storing the favorite state in localStorage, etc.
+});
