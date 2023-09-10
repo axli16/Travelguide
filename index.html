@@ -5,43 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
 </head>
 <body>
-    <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
+
         <!-- Favorite Button -->
         <a href="#" id="favoriteButton">&#9733;</a>
       </nav>
     <div id="main">
         <h1>Find what to do</h1>
     <input type="text">
-    <div class="choices">
-        <div id="pyramid-level-1" class="pyramid-level">
-            <button>Sights</button>
-            <button>Clubs</button>
-            <button>Restaurants</button>
+      <div id="button-container">
+        <button class="button" role="button">Sights</button>
+        <button class="button" role="button">Clubs</button>
+        <button class="button" role="button">Restaurants</button>
+        <button class="button" role="button">Shopping</button>
+        <button class="button" role="button">Activities</button>
+        <div id="new-button-container">
+          <!-- New buttons will be added here -->
+          
         </div>
-        <div id="pyramid-level-2" class="pyramid-level">
-            <button>Shopping</button>
-            <button>activities</button>
-        </div>
-        <div id="pyramid-level-3" class="pyramid-level">
-            <div id="container">
-                <div id="toggleContainer">
-                  <button id="toggleButton">Other</button>
-                </div>
-              </div>
-              
-            </div>
-        </div>
-
-
-
+        <button class="button" onclick="addButton()">Other</button>
+      </div>
     </div>
     <script src="script.js"></script>
 </body>

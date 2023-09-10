@@ -1,32 +1,4 @@
-const toggleContainer = document.getElementById("toggleContainer");
 
-toggleContainer.addEventListener("click", function(event) {
-  const target = event.target;
-
-  if (target.id === "toggleButton") {
-    // Replace the button with an input field
-    const inputField = document.createElement("input");
-    inputField.type = "text";
-    inputField.id = "inputField";
-    inputField.placeholder = "Other"; // Set the placeholder text
-    inputField.style.opacity = "0.5"; // Adjust the opacity value
-
-
-    toggleContainer.replaceChild(inputField, target);
-
-    inputField.addEventListener("blur", function() {
-      // If the input field is empty, replace it with the button again
-      if (inputField.value.trim() === "") {
-        toggleContainer.replaceChild(target, inputField);
-      } else {
-        target.textContent = "Edit Input";
-      }
-    });
-
-    inputField.focus();
-  }
-  
-});
 
 const buttons = document.querySelectorAll(".button");
 
@@ -57,4 +29,28 @@ favoriteButton.addEventListener("click", function(event) {
   }
 
   // You can add more logic here, such as storing the favorite state in localStorage, etc.
+});
+let buttonCount = 1;
+
+function addButton() {
+    const buttonContainer = document.getElementById('button-container');
+
+    // Ask for a title using a prompt dialog
+    const buttonTitle = prompt('Enter button title:');
+    if (!buttonTitle) {
+        return; // If the user cancels or enters an empty title, do nothing
+    }
+
+    const newButton = document.createElement('button');
+    newButton.classList.add('new-button');
+    newButton.textContent = buttonTitle;
+    buttonContainer.appendChild(newButton);
+    buttonCount++;
+}
+const button = document.querySelectorAll('.button');
+
+button.forEach(button => {
+    button.addEventListener('click', () => {
+        button.classList.toggle('selected');
+    });
 });
